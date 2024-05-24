@@ -1,9 +1,4 @@
-﻿# The script of the game goes in this file.
-
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
-
-define s = Character("Martin")
+﻿define s = Character("Martin")
 define c = Character("Peadar")
 define f = Character("Mikhail")
 define p = Character("Player")
@@ -19,24 +14,11 @@ init:
 # The game starts here.
 
 label start:
-
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-
     scene bg
-
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
-    
-    #https://mail.google.com/mail/u/2/?ogbl#inbox/FMfcgzGxRnVlcXGgxnNKsQFCzvrDSvzn
     
     show c at left
     show f at right
     show s 
-    # These display lines of dialogue.
-    #$ name=input("name?")
 
     s "Hi! Are you ready for the admission interview?"
 
@@ -46,13 +28,13 @@ label start:
             jump d0002
         "No":
             jump d0003
-        "I don’t know what you are talking about":
+        "I don't know what you are talking about":
             jump d0007
 
     label d0002:
-        s "My name is Martin Sillaots, and I'm the head of the Digital Learning Games master’s programme."
-        c "My name is Peadar Callaghan. I’m a graduate of the DLG programme and a teacher in this programme."
-        f "My name is Mikhail Fiadotau, and I’m a teacher in this programme."
+        s "My name is Martin Sillaots, and I'm the head of the Digital Learning Games master's programme."
+        c "My name is Peadar Callaghan. I'm a graduate of the DLG programme and a teacher in this programme."
+        f "My name is Mikhail Fiadotau, and I'm a teacher in this programme."
         s"Please, introduce yourself, your background and interest in the DLG programme."
 
         menu:
@@ -128,6 +110,5 @@ label start:
             "I would like to create games that teach something":
                 $ score+=1
                 #jump d0107
-    # This ends the game.
     "end for the demo"
     return
