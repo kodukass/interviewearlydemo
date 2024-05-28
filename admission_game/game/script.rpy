@@ -32,6 +32,7 @@ label start:
             jump d0007
 
     label d0002:
+        "d0002"
         s "My name is Martin Sillaots, and I'm the head of the Digital Learning Games master's programme."
         c "My name is Peadar Callaghan. I'm a graduate of the DLG programme and a teacher in this programme."
         f "My name is Mikhail Fiadotau, and I'm a teacher in this programme."
@@ -82,6 +83,7 @@ label start:
         return
 
     label d0007:
+        "d0007"
         s"This is a DLG admission interview. You applied to Dream Apply, and our study counsellor scheduled a meeting with you for the interview."
         menu:
             "Ah, you are right. I forgot about it.":

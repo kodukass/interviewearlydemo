@@ -246,6 +246,7 @@ style choice_button_text is default:
 ##
 ## The quick menu is displayed in-game to provide easy access to the out-of-game
 ## menus.
+$ config.console=true
 
 screen quick_menu():
 
@@ -254,13 +255,21 @@ screen quick_menu():
 
     if quick_menu:
 
+        vbox:
+            style_prefix "quick"
+
+            xpos 20
+            ypos 50
+            yoffset 1
+            textbutton _("BACK") action Rollback()
+
         hbox:
             style_prefix "quick"
 
             xalign 0.5
             yalign 1.0
 
-            textbutton _("Back") action Rollback()
+            ##textbutton _("Back") action Rollback()
             textbutton _("History") action ShowMenu('history')
             textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
             textbutton _("Auto") action Preference("auto-forward", "toggle")
